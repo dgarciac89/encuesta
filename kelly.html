@@ -1,0 +1,33 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Diego Garcia">
+  <title>Redirect to 4 random sites</title>
+
+</head>
+
+<body>
+  <p>You are being redirected...</p>
+  <script type = "text/javascript">
+  
+  function getRandomInt(max) {
+	return Math.floor(Math.random() * max);
+	}
+  
+	var surveys = ["https://www.caas.cn/en/",
+					 "https://english.pku.edu.cn/",
+					 "https://www.ruc.edu.cn/en",
+					 "https://www.scut.edu.cn/en/"]
+	
+	var max = surveys.length
+	var random = getRandomInt(max)
+	var url_redirect = surveys[random] 
+	
+	window.location.replace(url_redirect);
+  </script>  
+</body>
+</html>
